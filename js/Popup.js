@@ -7,6 +7,7 @@ $(document).ready(function() {
     });
     localStorage.setItem('popState','shown')
   }
+  $('.popScroll').fadeOut();
   $('#close').on('click', function() {
     $('.popScroll').fadeOut(250);
     $('body').removeClass('overlay');
