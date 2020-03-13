@@ -7,11 +7,11 @@ $(document).ready(function() {
     });
     localStorage.setItem('popState','shown')
   }
-  else{
-    $('.popScroll').fadeOut();
-  }
   $('#close').on('click', function() {
     $('.popScroll').fadeOut(250);
     $('body').removeClass('overlay');
   });
+  if(localStorage.getItem('popState') = 'shown'){
+    $('.popScroll').fadeOut(5);
+  }
 });
