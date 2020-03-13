@@ -1,0 +1,154 @@
+/* Pop up CSS Code */
+body.overlay:after{
+  content: linear-gradient(#000, #202020);
+  width:100%;
+  height:100%;
+  top: 0px;
+  z-index:0;
+  opacity: 0.8;
+  position:fixed;
+}
+body.overlay{ /* Prevents scrolling */
+  overflow:hidden;
+  max-height:100%;
+  max-width:100%;
+}
+
+.popScroll{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  width:450px;
+  height:350px;
+  position:relative;
+  z-index: 10;
+  margin:20px auto;
+  display:block;
+  text-align:center;
+  -moz-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-color: #202020; /* layer fill content */
+  -moz-box-shadow: 0 0 10px rgba(55, 255, 196, .58);
+  -webkit-box-shadow: 0 0 10px rgba(55, 255, 196, .58);
+  -o-box-shadow: 0 0 10px rgba(55, 255, 196, .58);
+  box-shadow: 0 3px 15px 4px rgba(55, 255, 196, .58); /* creates shadow type effect */
+  -webkit-transform-origin:top center;
+  -moz-transform-origin:top center;
+  -o-transform-origin:top center;
+  transform-origin:top center; /* Animates from top to center */
+  -webkit-animation: pop 1.2s forwards;
+  -moz-animation: pop 1.2s forwards;
+  -o-animation: pop 1.2s forwards;
+  animation: pop 1.2s forwards; /* Animation name and time */
+}
+/* Animation informations */
+@-webkit-keyframes pop {
+    0% {
+        -webkit-transform: perspective(800px) rotateX(-90deg);
+        -moz-transform: perspective(800px) rotateX(-90deg);
+        -o-transform: perspective(800px) rotateX(-90deg);
+    }
+    40% {
+        -webkit-transform: perspective(800px) rotateX(30deg);
+        -moz-transform: perspective(800px) rotateX(30deg);
+        -o-transform: perspective(800px) rotateX(30deg);
+    }
+    70% {
+        -webkit-transform: perspective(800px) rotateX(-10deg);
+        -moz-transform: perspective(800px) rotateX(-10deg);
+        -o-transform: perspective(800px) rotateX(-10deg);
+    }
+    100% {
+        -webkit-transform: perspective(800px) rotateX(0deg);
+        -moz-transform: perspective(800px) rotateX(0deg);
+        -o-transform: perspective(800px) rotateX(0deg);
+    }
+}
+
+.popScroll h1{
+  height: 60px;
+  position: relative;
+  font: 30px/60px Dance;
+  text-align: center;
+  background: #37E1C4;
+  color: #202020;
+}
+
+.popScroll p{
+  margin-top: 75px;
+  padding: 0px 10px;
+  font-family: Acme;
+  font-size: 20px;
+  color: #fff;
+}
+
+#option{
+  position: relative;
+}
+
+.boxi{
+	display: inline-block;
+	width: 165px;
+	line-height: 42px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+button{
+	width: 165px;
+	line-height: 42px;
+	color: #fff;
+  font-family: Amatic;
+  font-size: 1.5em;
+  cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+  border: none;
+}
+
+#news{
+	background: #3D79D0;
+}
+#news:hover{
+  background: #1852C7;
+}
+
+#close{
+	background: #D21111;
+}
+#close:hover{
+  background: #B30E0E;
+}
+
+.popScroll em{
+	width: 42px;
+	display: inline-block;
+	position: relative;
+	margin: 0 -20px;
+	line-height: 42px;
+	background: #202020;
+	color: #fff;
+	text-align: center;
+	border-radius: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  .popup{
+    width:350px;
+    height:480px;
+  }
+
+  .popScroll h1{
+    height: 40px;
+    font: 25px/40px Dance;
+  }
+}

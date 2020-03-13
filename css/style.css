@@ -1,0 +1,704 @@
+/* Fonts */
+@font-face {
+  src: url(../fonts/DancingScript-Regular.ttf);
+  font-family: Dance;
+}
+@font-face {
+  src: url(../fonts/Acme-Regular.ttf);
+  font-family: Acme;
+}
+@font-face {
+  src: url(../fonts/AmaticSC-Bold.ttf);
+  font-family: Amatic;
+}
+/* Global */
+body, html{
+  font: 15px/1.5 Garamond, Sans-Serif;
+  margin:0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #202020;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+ul{
+  margin: 0;
+  padding-right: 60px;
+  padding-bottom: 20px;
+}
+
+button :hover{
+  color: #37E1C4;
+  font-weight: bolder;
+}
+
+a{
+  color: #f4f4f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Amatic;
+  font-size: 1.5em;
+}
+
+/* Header */
+header{
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  background:#202020;
+  color:#ffffff;
+  padding-top: 40px;
+  min-height: 80px;
+  border-bottom: #37E1C4 4px solid;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(55, 255, 196, 0.8);
+  -moz-box-shadow: 0px 2px 10px 0px rgba(55, 255, 196, 0.8);
+  box-shadow: 0px 2px 10px 0px rgba(55, 255, 196, 0.8);
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+#branding h1{
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+  font-size: 35px;
+  font-family: Dance;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a{
+  color: #37E1C4;
+}
+
+header a:hover{
+  color: #cccccc;
+}
+
+/*footer*/
+footer{
+  padding: 20px;
+  position: fixed;
+  clear: both;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  color: #ffffff;
+  background: #202020;
+  text-align: center;
+  font-size: 15px;
+  border-top: #37E1C4 4px solid;
+  -webkit-box-shadow: 0px 2px 20px 2px rgba(55, 255, 196, 0.8);
+  -moz-box-shadow: 0px 2px 20px 2px rgba(55, 255, 196, 0.8);
+  box-shadow: 0px 2px 20px 2px rgba(55, 255, 196, 0.8);
+}
+
+/*Home Page Button*/
+.button_1{
+  height:50px;
+  width: 150px;
+  margin: 0 75px 0 75px;
+  padding-bottom: 2px;
+  background:#202020;
+  color: white;
+  border-width: thick;
+  border-style: groove;
+  border-color: #37E1C0;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: Amatic;
+}
+
+/* Background Photos */
+.bg{
+  background-image: url('../img/home.jpg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+img#bg2{
+  position: fixed;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+img#bg3{
+  position: fixed;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+img#bg4{
+  position: fixed;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.bg5{
+  background-image: url('../img/subs.jpg');
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Home */
+#welcome{
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  position: absolute;
+  z-index: 1;
+  font-size: 6em;
+  color: #37E1C4;
+  background-color: #202020;
+  font-family: Amatic;
+  text-align: center;
+  display: none;
+}
+/* Services */
+article#main-col{
+  margin-top: 120px;
+  position: relative;
+  z-index: -1;
+  padding-bottom: 0px;
+}
+
+ul#services li{
+  list-style: none;
+  padding: 0 20px 0 20px;
+  width: 50%;
+  border: #202020 solid 1px;
+  margin: 5px 0px 5px 0px;
+  position: relative;
+  z-index: -1;
+  left: 25%;
+  color: white;
+  font-size: 1.2em;
+  font-family: Acme;
+  text-align: justify;
+  background: #202020;
+  opacity: 0.9;
+}
+
+.wrapper2{
+  overflow-y: auto;
+  height: 90%;
+}
+
+/* About */
+.wrapper {
+  padding-top: 120px;
+  position: relative;
+  z-index: -1;
+  left: 15%;
+  display: block;
+  width: 100%;
+  height: 65%;
+  overflow-y: auto;
+}
+
+.shadow {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  background: #202020;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+article#main{
+  padding-top: 40px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 1.5em;
+  font-family: Acme;
+}
+
+aside#side{
+  width: 70%;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: Acme;
+}
+
+::-webkit-scrollbar {
+      width: 0px;
+}
+
+.padd{
+  padding-top: 40px;
+}
+
+/*Contact Us*/
+.button_3{
+  height: 40px;
+  background: #37E1C0;
+  border: none;
+  padding: 5px;
+  font-family: Garamond;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wrapper1 {
+  margin-top: 120px;
+  position: relative;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.Contact h1{
+  font-size: 40px;
+  margin-top: 0;
+  padding-top: 40px;
+  text-align: center;
+  color: #37E1C4;
+  font-family: Dance;
+  font-size: 2.8em;
+  text-decoration: underline;
+}
+
+.Contact form{
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 60px;
+  margin:0;
+}
+
+.Contact input{
+  width: 13%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.Contact textarea{
+  width: 17%;
+  height: 100px;
+  padding: 8px;
+  margin: 8px 0px;
+}
+
+input[name="username"]:focus{
+  outline: none;
+}
+input[name="email"]:focus{
+  outline: none;
+}
+input[name="message"]:focus{
+  outline: none;
+}
+
+.vl{
+  border-left: 2px solid #f4f4f4;
+   height: 500px;
+   position:absolute;
+   left: 50%;
+   top: 15%;
+}
+
+.boxes h3{
+  float: right;
+  padding-right: 700px;
+  margin-top: -400px;
+  font-size: 20px;
+  color: #f4f4f4;
+}
+
+div #box1 img{
+  float: right;
+  padding-right: 800px;
+  margin-top: -300px;
+  width: 4em;
+}
+
+div #box2 img{
+  float: right;
+  padding-right: 650px;
+  margin-top: -300px;
+  width: 4em;
+}
+
+div #box3{
+  float: right;
+  padding-right: 75px;
+  margin-top: -300px;
+}
+
+/*Subscription*/
+#subscribe{
+  overflow-y: auto;
+  height: 80%;
+}
+
+.sub{
+  margin-top: 100px;
+  text-align: center;
+  color: #f4f4f4;
+}
+
+.sub h1{
+  font-size: 45px;
+  margin-top: 0;
+  padding: 15px;
+  padding-top: 150px;
+  letter-spacing: 5px;
+}
+
+.sub h2{
+  font-size: 40px;
+  padding: 5px;
+  letter-spacing: 5px;
+}
+
+.sub h3{
+  font-size: 35px;
+  padding: 15px;
+  letter-spacing: 5px;
+}
+
+form.newsletter{
+  text-align: center;
+}
+
+.newsletter input[type="email"]{
+  padding: 5px;
+  height: 24px;
+  width: 250px;
+  margin: 0;
+}
+
+.button_2{
+  height: 38px;
+  background: #37E1C0;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-family: Garamond;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin: 0;
+}
+
+
+/* For Canvas */
+#three{
+  display: none;
+}
+
+#myCanvas{
+  border-radius: none;
+  display: none;
+  width: 30px;
+	height: 30px;
+  margin-right: 20px;
+}
+
+#myCanvas:hover {
+	background-color: #444;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1795px) and (min-width:931px) {
+  /* Contact Us */
+    .wrapper1{
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    img#bg4{
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: fixed;
+    }
+    .Contact input{
+      width: 50%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    .Contact textarea{
+      width: 60%;
+      height: 200px;
+      padding: 8px;
+      margin: 8px 0px;
+    }
+    .Contact{
+      margin-left: -40px;
+      margin-top: -20px;
+    }
+
+    .Contact h1{
+      color: white;
+      padding-left: 40px;
+      text-align: center;
+    }
+
+    .vl{
+      display: none;
+    }
+
+    .boxes{
+      float: left;
+      margin-top: 55vh;
+      padding-left: 20px;
+      padding-bottom: 50px;
+    }
+
+    .boxes h3{
+      margin-top: -360px;
+      color: black;
+      float: left;
+      padding-right: 0;
+    }
+
+    div#box1 img{
+      float: left;
+      padding-right: 0;
+    }
+
+    div#box2 img{
+      float: left;
+      padding-right: 0;
+      margin-left: 8em;
+    }
+    iframe{
+      width: 350px;
+      height: 300px;
+    }
+    div#box3{
+      position: relative;
+      z-index: -1;
+      padding: 0px 0 50px 50vh;
+    }
+
+}
+@media only screen and (max-width: 930px) {
+/* Header */
+  #branding h1{
+    padding-left: 20px;
+  }
+  #myCanvas{
+    display: inline-block;
+  }
+
+	nav ul, nav:active ul {
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #202020;
+		border: 5px solid #37E1C4;
+		right: 20px;
+		width: 50%;
+	}
+
+	nav li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	nav:hover ul {
+    z-index: 3;
+		display: block;
+	}
+
+/* Footer */
+  footer{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+  }
+
+  footer p{
+    padding-right: 45px;
+  }
+
+/* Home */
+  .bg{
+    background-position: -300px 100px;
+    position: relative;
+    z-index: -1;
+    overflow-y: auto;
+  }
+
+  .button_1{
+    margin-bottom: 10px;
+  }
+
+  /* Services */
+  .service{
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  article#main-col{
+    margin-top: 120px;
+    position: relative;
+    z-index: -1;
+  }
+
+  img#bg2{
+    position: fixed;
+    height: 100%;
+  }
+
+  ul#services li{
+    left: 0;
+    margin: 5px 0px 5px 0px;
+    width: 95%;
+  }
+
+/* About Us */
+  img#bg3{
+    position: fixed;
+    height: 100%;
+  }
+
+  article#main, aside#side{
+    font-size: 1.5em;
+  }
+
+  .wrapper{
+    overflow: auto;
+    height: 70%;
+    left: 2%;
+  }
+  .shadow{
+    overflow: hidden;
+    width: 135%;
+  }
+
+  /* Contact Us */
+    .wrapper1{
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    img#bg4{
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: fixed;
+    }
+    .Contact input{
+      width: 80%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    .Contact textarea{
+      width: 90%;
+      height: 100px;
+      padding: 8px;
+      margin: 8px 0px;
+    }
+    .Contact{
+      margin-left: -40px;
+      margin-top: -20px;
+    }
+
+    .Contact h1{
+      color: white;
+      padding-left: 40px;
+      text-align: center;
+    }
+
+    .vl{
+      display: none;
+    }
+
+    .boxes{
+      float: left;
+      margin-top: 50vh;
+      padding-left: 20px;
+      padding-bottom: 50px;
+    }
+
+    .boxes h3{
+      margin-top: -360px;
+      color: black;
+      float: left;
+      padding-right: 0;
+    }
+
+    div#box1 img{
+      float: left;
+      padding-right: 0;
+    }
+
+    div#box2 img{
+      float: left;
+      padding-right: 0;
+      margin-left: 8em;
+    }
+    iframe{
+      width: 350px;
+      height: 300px;
+    }
+    div#box3{
+      position: relative;
+      z-index: -1;
+      padding: 8em 0 50px 0;
+    }
+
+/* Subscription */
+  .bg5{
+    overflow: hidden;
+    height: 90%;
+  }
+
+  #subscribe{
+    overflow: auto;
+    height: 90%;
+  }
+
+  .sub h1, .sub h2, .sub h3{
+    font-size: 2.5em;
+    margin-top: -80px;
+  }
+
+  .sub h3{
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}

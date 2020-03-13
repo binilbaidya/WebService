@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Affordable Professional Web Design">
+    <meta name="keywords" content="web design, affordable web design, professional web design">
+    <!-- Title Bar Name -->
+    <title>Contacts</title>
+    <!-- Title Bar Logo -->
+    <link rel="shortcut icon" type="image/PNG" href="../img/SiteLogo.PNG">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div id="branding">
+        <h1><span class="highlight">BrB</span> Web Design</h1>
+      </div>
+      <img id="three" src="../img/three.png" alt="menu icon">
+      <nav>
+        <canvas id="myCanvas">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <ul>
+          <li><a href="../index.html" class="transition">Home</a></li>
+          <li><a href="Services.html" class="transition">Services</a></li>
+          <li><a href="About.html" class="transition">About</a></li>
+          <li class="current"><a href="Contacts.html">Contact Us</a></li>
+          <li><a href="Subscription.html" class="transition">Subscription</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <img src="../img/contacts.jpg" alt="" id="bg4"><!-- Image kept as background -->
+    <!-- Main Content -->
+    <div class="wrapper1">
+      <article class="Contact">
+        <h1>Contact Us</h1>
+        <form name="form" onsubmit="return Validate()" method="POST"><!-- Validate function is executed when form is submitted. -->
+          <div id="name_div">
+            <label>Name:</label><br>
+            <input type="text" name="username" placeholder="Enter Name"><!-- Box created to enter texts -->
+            <div id="name_error"></div><!-- Empty div created to display the error when the form is submitted -->
+          </div>
+          <br><!-- Breaks one line -->
+          <div id="email_div">
+            <label>Email:</label><br>
+            <input type="email" name="email" placeholder="Enter Email">
+            <div id="email_error"></div>
+          </div>
+          <br>
+          <div id="message_div">
+            <label>Message:</label><br>
+            <textarea placeholder="Enter Your Message" name="message"></textarea>
+            <div id="message_error"></div>
+          </div>
+          <button type="submit" class="button_3" onclick="return add()">Submit</button><!-- When submit button is pressed it executes add function which stores certain entered information in localStorage -->
+        </form>
+      </article>
+
+      <div class="vl"></div><!-- To create a verticle line -->
+
+      <aside class="boxes">
+        <h3>You can also find us at:</h3>
+        <div id="box1">
+          <a href="https://www.facebook.com/pg/Binil-Baidya-439207706558846/posts/?ref=page_internal" target="_blank"><img src="../img/facebook.png" alt="Facebook Profile"></a><!-- Image with a link -->
+        </div>
+        <div id="box2">
+          <a href="https://www.instagram.com/__binil__/" target="_blank"><img src="../img/insta.png" alt="Insta Profile"></a><!-- Image with a link -->
+        </div>
+        <div id="box3"><iframe width="500px" height="300px" src="https://maps.google.com/maps/embed/v1/place?q=27.746580,85.347404&key=AIzaSyDnUDebjn7BWpYSSnjLiixeI0WxX69dCpA" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Plot
+              a route map</a></iframe></div><br><!-- iframe used to keep Google Maps to display our locations -->
+      </aside>
+
+    </div>
+
+    <footer>
+      <p>BrB Web Design, Copyright &copy; 2018</p>
+    </footer>
+    <!-- JavaScripts/jQuerys -->
+    <script src="../js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="../js/canvas.js" charset="utf-8"></script>
+    <script src="../js/transitions.js" charset="utf-8"></script>
+    <script src="../js/valid_store.js" charset="utf-8"></script><!-- Used for validationg forms and for localStorage -->
+
+  </body>
+
+</html>

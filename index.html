@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Affordable Professional Web Design">
+    <meta name="keywords" content="web design, affordable web design, professional web design">
+    <!-- Title Name -->
+    <title>Web Design | Welcome</title>
+    <!-- Title Bar Logo -->
+    <link rel="shortcut icon" type="image/PNG" href="img/SiteLogo.PNG">
+    <!-- CSS scripts(External Scripts) -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Popup.css">
+    <!-- CSS scripts(Internal Scripts) -->
+    <style media="screen">
+      #showcase h1 {
+        text-align: center;
+        margin: 0;
+        margin-top: 120px;
+        padding-top: 250px;
+        padding-bottom: 40px;
+        font-size: 60px;
+        color: #37E1C0;
+      }
+
+      @media only screen and (max-width: 950px) {
+        #showcase h1 {
+          padding-top: 0;
+          margin-top: 250px;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- Header with website name and nav bar -->
+    <header>
+      <div id="branding">
+        <h1><span class="highlight">BrB</span> Web Design</h1>
+      </div>
+      <img id="three" src="img/three.png" alt="menu icon"> <!-- Hidden at all times. -->
+      <nav>
+        <!-- Canvas used only for small width devices -->
+        <canvas id="myCanvas">
+          Your browser does not support the HTML5 canvas tag.<!-- Shows this message if the browser does not support canvas. -->
+        </canvas>
+        <!-- Navigation bar items kept as lists -->
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="html/Services.html" class="transition">Services</a></li><!-- transition class given in order to give some effect when clicking the link. -->
+          <li><a href="html/About.html" class="transition">About</a></li>
+          <li><a href="html/Contacts.html" class="transition">Contact Us</a></li>
+          <li><a href="html/Subscription.html" class="transition">Subscription</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Pop-up at the start of the website -->
+    <div class="popScroll pop">
+      <div class="popup">
+        <h1>Welcome to BrB Web Design!</h1>
+        <p>You Can Close The Pop-up <span style="color: red;"> OR </span> You Can Subscribe To Our Newsletter.</p>
+        <div id="option">
+          <a href="html/Subscription.html" id="news" class="boxi transition">Subscribe</a>
+          <em>or</em>
+          <button type="button" id="close" class="boxi">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- Main content -->
+    <!-- Home Page kept minimal -->
+    <div class="bg"><!-- bg div in order keep a background image -->
+      <section id="showcase" style="text-align:center;"><!-- Inline CSS script used -->
+        <h1>Affordable Professional Web Design</h1>
+        <a href="html/Services.html" class="transition"><button class="button_1">Services</button></a>
+        <a href="html/About.html" class="transition"><button class="button_1">About Us</button></a>
+      </section>
+    </div>
+    <!-- JavaScripts/jQuerys -->
+    <script src="js/jquery-3.3.1.min.js" charset="utf-8"></script><!-- Main jQuery required for the usability of other jQuerys -->
+    <script src="js/Popup.js" charset="utf-8"></script><!-- For the starting Pop-up -->
+    <script src="js/canvas.js" charset="utf-8"></script><!-- For the icon when width of the device is small -->
+    <script src="js/transitions.js" charset="utf-8"></script><!-- Creates a transition like effect when going to another website -->
+
+  </body>
+</html>
