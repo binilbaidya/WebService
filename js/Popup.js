@@ -12,6 +12,6 @@ $(document).ready(function() {
     $('body').removeClass('overlay');
   });
   if(localStorage.getItem('popState') = 'shown'){
-    $('.popScroll').fadeOut(5);
+    $('.popScroll').hide();
   }
 });
