@@ -1,17 +1,13 @@
-$(document).ready(function() {
-  if(localStorage.getItem('popState') != 'shown'){
-    $('.pop').each(function(){
+if (!(sessionStorage.getItem('firstVisit') == "1")) {
+  sessionStorage.setItem('firstVisit', '1');
+  $('.popScroll').css("display", "block");
+  $('.pop').each(function () {
       var color = $(this).css('backgroundColor');
       var content = $(this).html();
       $('body').addClass('overlay');
-    });
-    localStorage.setItem('popState','shown')
-  }
-  $('#close').on('click', function() {
-    $('.popScroll').fadeOut(250);
-    $('body').removeClass('overlay');
   });
-  if(localStorage.getItem('popState') = 'shown'){
-    $('.popScroll').hide();
-  }
+}
+$('#close').on('click', function () {
+  $('.popScroll').fadeOut(250);
+  $('body').removeClass('overlay');
 });

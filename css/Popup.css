@@ -15,6 +15,7 @@ body.overlay{ /* Prevents scrolling */
 }
 
 .popScroll{
+  display: none;
   position: fixed;
   z-index: 10;
   top: 0;
